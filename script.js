@@ -118,8 +118,9 @@ const sortSongs = () => {
       return 1;
     }
 
-return 0;
+    return 0;
   });
+return userData?.songs;
 };
 
 renderSongs(userData?.songs);
