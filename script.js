@@ -144,7 +144,7 @@ const shuffle = () => {
 };
 
 const deleteSong = (id) => {
-    if (userData?.currentSong?.id === id) {
+  if (userData?.currentSong?.id === id) {
     userData.currentSong = null;
     userData.songCurrentTime = 0;
 
@@ -156,6 +156,10 @@ const deleteSong = (id) => {
   renderSongs(userData?.songs); 
   highlightCurrentSong(); 
   setPlayButtonAccessibleText(); 
+
+  if (userData?.songs.length === 0) {
+
+  }
 
 };
 
