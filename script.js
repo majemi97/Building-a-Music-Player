@@ -87,7 +87,7 @@ const playNextSong = () => {
   }
 };
 
-const playPreviousSong = () => {
+const playPreviousSong = () =>{
    if (userData?.currentSong === null) return;
    else {
     const currentSongIndex = getCurrentSongIndex();
@@ -218,8 +218,13 @@ shuffleButton.addEventListener("click", shuffle);
 audio.addEventListener("ended", () => {
   const currentSongIndex = getCurrentSongIndex();
   const nextSongExists = userData?.songs[currentSongIndex + 1] !== undefined;
+
   if (nextSongExists) {
     playNextSong();
+  }
+  else {
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
   }
 });
 
