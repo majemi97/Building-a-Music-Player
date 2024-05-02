@@ -100,7 +100,7 @@ const playSong = (id) => {
 
   highlightCurrentSong();
   setPlayerDisplay();
- setPlayButtonAccessibleText();
+  setPlayButtonAccessibleText();
   audio.play();
 };
 
@@ -131,6 +131,10 @@ const playPreviousSong = () =>{
     playSong(previousSong.id);
    }
 };
+
+  const shuffle = () => {
+    
+  }
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
