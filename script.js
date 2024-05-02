@@ -122,7 +122,7 @@ const playNextSong = () => {
   }
 };
 
-const playPreviousSong = () => {
+const playPreviousSong = () =>{
    if (userData?.currentSong === null) return;
    else {
     const currentSongIndex = getCurrentSongIndex();
@@ -159,7 +159,10 @@ const deleteSong = (id) => {
 
   if (userData?.songs.length === 0) {
     const resetButton = document.createElement("button");
-  const resetText = document.createTextNode("Reset Playlist");
+    const resetText = document.createTextNode("Reset Playlist");
+
+    resetButton.id = "reset";
+    resetButton.ariaLabel = "Reset playlist";
   
   }
 
